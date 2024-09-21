@@ -8,18 +8,18 @@
 
 import Foundation
 
-struct WeatherData: Decodable{
+struct WeatherData: Codable{
     let name: String // bring the country's name
     let weather:[Weather] // description from the place | weather is inside of a list
     let main: Main // temperature from the place
     
 }
 
-struct Weather: Decodable{
+struct Weather: Codable{
     let id: Int
     let description: String
 }
 
-struct Main: Decodable{
+struct Main: Codable{
     let temp: Double
 }
